@@ -2,3 +2,5 @@
 node_modules
 test/results
 npm-debug.log
+.idea
+package-lock.json

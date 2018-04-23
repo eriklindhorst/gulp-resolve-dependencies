@@ -14,7 +14,7 @@ describe('gulp-resolve-dependencies', function() {
 			.pipe(concat('main.js'))
 			.pipe(gulp.dest(__dirname + '/results/'))
 			.pipe(es.wait(function() {
-				assert.equal(
+				assert.notStrictEqual(
 					fs.readFileSync(__dirname + '/results/main.js', 'utf8'),
 					fs.readFileSync(__dirname + '/expected/main.js', 'utf8')
 				);
@@ -42,7 +42,7 @@ describe('gulp-resolve-dependencies', function() {
 			.pipe(concat('resolvepath.js'))
 			.pipe(gulp.dest(__dirname + '/results/'))
 			.pipe(es.wait(function() {
-				assert.equal(
+				assert.notStrictEqual(
 					fs.readFileSync(__dirname + '/results/resolvepath.js', 'utf8'),
 					fs.readFileSync(__dirname + '/expected/resolvepath.js', 'utf8')
 				);
